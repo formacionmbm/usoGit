@@ -18,5 +18,10 @@ public class SaludoController {
 	public String saludar(@PathVariable String nombre) {
 		return "Hola "+nombre;
 	}
+	
+	@GetMapping("/{saludo}/{nombre}")
+	public String saludar(@PathVariable String saludo,@PathVariable String nombre) {
+		return saludo+nombre;
+	}
 
 }
